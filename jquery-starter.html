@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="/Users/david/workspace/cchomework/jquery-pres/jq-pres.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="first">Word</div>
+	<div class="second"></div>
+	<div class="third">more words</div>
+	<script>
+		// Below shows what occurs when the .on() method is utilized.
+		// Switch .on() to .off() to see the counter effect.
+		$('.first').on('click', (function() {
+			$('.second')
+				.css({
+					color: "red"
+				})
+				.html("Hello World...Goodbye")
+				.slideUp(2000) // slowed this down to show what it does
+			$('.third')
+				.css({
+					color: "green"
+				})
+		}));
+	</script>
+	<!-- Below is an example of a JQuery statement using the .on() method-->
+	<p>
+		$(selector).on(event, selector, function(eventObj), map) {<br><br>
+		&nbsp&nbsp //do something, or don't... .off() will negate it anyway.<br><br>
+		});
+	</p>
+	<!-- Below is a list of the different parts of the JQuery statement -->
+	<ul>
+		<li>"$": the "bling", starts it off showing its JQuery</li>
+		<li>"selector": identifies on which element the effect will take place</li>
+		<li>".on()/.off()": the method used to either place or remove event handlers</li>
+		<li>"event": the action that will apply the effect to the selected element</li>
+		<li>"functon(eventObj)": specifies the function to run when the event occurs</li>
+		<li>"map": specifies an event map that may have more events to attach and functions to run</li>
+	</ul>
+</body>
+</html>
